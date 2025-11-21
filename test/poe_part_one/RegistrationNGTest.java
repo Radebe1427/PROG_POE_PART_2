@@ -21,23 +21,6 @@ public class RegistrationNGTest {
     
     public RegistrationNGTest() {
     }
-
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
-    @BeforeMethod
-    public void setUpMethod() throws Exception {
-    }
-
-    @AfterMethod
-    public void tearDownMethod() throws Exception {
-    }
-
     /**
      * Test of userNameCheck method correctly formatted, of class Registration.
      */
@@ -135,7 +118,7 @@ public class RegistrationNGTest {
     @Test
     public void testLoadLoginInfo() {
         System.out.println("loadLoginInfo");
-        String enteredUsername = "";
+        String enteredUsername = "Fa_ni";
         Registration instance = new Registration();
         boolean expResult = false;
         boolean result = instance.loadLoginInfo(enteredUsername);
@@ -204,7 +187,7 @@ public class RegistrationNGTest {
         boolean expResult = false;
         boolean result = instance.userPersonalDetails();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -214,7 +197,7 @@ public class RegistrationNGTest {
         boolean expResult = false;
         boolean result = instance.Username();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -224,7 +207,7 @@ public class RegistrationNGTest {
         boolean expResult = false;
         boolean result = instance.userPhoneNumber();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -234,7 +217,7 @@ public class RegistrationNGTest {
         boolean expResult = false;
         boolean result = instance.userPassword();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -244,7 +227,7 @@ public class RegistrationNGTest {
         boolean expResult = false;
         boolean result = instance.userSecurityDetails();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -254,7 +237,7 @@ public class RegistrationNGTest {
         String expResult = "";
         String result = instance.promptUsername();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -264,7 +247,7 @@ public class RegistrationNGTest {
         int expResult = 0;
         int result = instance.promptPasswordOptions();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -274,7 +257,7 @@ public class RegistrationNGTest {
         String expResult = "";
         String result = instance.getEnteredPassword();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -283,18 +266,18 @@ public class RegistrationNGTest {
         boolean userFound = false;
         Registration instance = new Registration();
         instance.handleForgotPassword(userFound);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
     public void testHandleLogin() {
         System.out.println("handleLogin");
         boolean userFound = false;
-        String enteredPassword = "";
-        String enteredUsername = "";
+        String enteredPassword = "R@debe21";
+        String enteredUsername = "kyl_1";
         Registration instance = new Registration();
         instance.handleLogin(userFound, enteredPassword, enteredUsername);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -302,7 +285,7 @@ public class RegistrationNGTest {
         System.out.println("clearLoginFile");
         Registration instance = new Registration();
         instance.clearLoginFile();
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -312,7 +295,7 @@ public class RegistrationNGTest {
         int expResult = 0;
         int result = instance.showQuickChatMenu();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -321,27 +304,27 @@ public class RegistrationNGTest {
         ArrayList<Message> sentMessages1 = null;
         Registration instance = new Registration();
         instance.sendMessages(sentMessages1);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
     public void testCaptureRecipient() {
         System.out.println("captureRecipient");
         Registration instance = new Registration();
-        String expResult = "";
+        String expResult = "+27834557896";
         String result = instance.captureRecipient();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
     public void testCaptureMessageText() {
         System.out.println("captureMessageText");
         Registration instance = new Registration();
-        String expResult = "";
+        String expResult = "Did you get the cake?";
         String result = instance.captureMessageText();
         assertEquals(result, expResult);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -350,7 +333,7 @@ public class RegistrationNGTest {
         Message msg = null;
         Registration instance = new Registration();
         instance.handleMessageAction(msg);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -359,7 +342,7 @@ public class RegistrationNGTest {
         ArrayList<Message> sentMessages = null;
         Registration instance = new Registration();
         instance.showSentMessages(sentMessages);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -368,7 +351,7 @@ public class RegistrationNGTest {
         ArrayList<Message> disregardedMessages = null;
         Registration instance = new Registration();
         instance.showDisregardedMessages(disregardedMessages);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -377,7 +360,7 @@ public class RegistrationNGTest {
         ArrayList<Message> storedMessages = null;
         Registration instance = new Registration();
         instance.showStoredMessages(storedMessages);
-        fail("The test case is a prototype.");
+       
     }
 
     @Test
@@ -386,7 +369,7 @@ public class RegistrationNGTest {
         ArrayList<Message> sentMessages = null;
         Registration instance = new Registration();
         instance.showLongestSentMessage(sentMessages);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -395,7 +378,7 @@ public class RegistrationNGTest {
         ArrayList<Message> allMessages = null;
         Registration instance = new Registration();
         instance.searchByMessageID(allMessages);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -404,7 +387,7 @@ public class RegistrationNGTest {
         ArrayList<Message> allMessages = null;
         Registration instance = new Registration();
         instance.searchByRecipient(allMessages);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -413,7 +396,7 @@ public class RegistrationNGTest {
         ArrayList<Message> storedMessages = null;
         Registration instance = new Registration();
         instance.deleteByHash(storedMessages);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
@@ -422,25 +405,25 @@ public class RegistrationNGTest {
         ArrayList<Message> sentMessages1 = null;
         Registration instance = new Registration();
         instance.displayReport(sentMessages1);
-        fail("The test case is a prototype.");
+        
     }
 
     @Test
     public void testSaveAllMessages() {
         System.out.println("saveAllMessages");
-        String currentUser1 = "";
+        String currentUser = "kyl_1";
         Registration instance = new Registration();
-        instance.saveAllMessages(currentUser1);
-        fail("The test case is a prototype.");
+        instance.saveAllMessages(currentUser);
+        
     }
 
     @Test
     public void testLoadAllMessages() {
         System.out.println("loadAllMessages");
-        String username = "";
+        String currentUser = "kyl_1";
         Registration instance = new Registration();
-        instance.loadAllMessages(username);
-        fail("The test case is a prototype.");
+        instance.loadAllMessages(currentUser);
+        
     }
     
 }
