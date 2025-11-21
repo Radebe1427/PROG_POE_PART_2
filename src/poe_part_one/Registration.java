@@ -166,13 +166,12 @@ private String currentUser; // tracks who is logged in
         for (int i = 0; i < users.length(); i++) {
             JSONObject obj = users.getJSONObject(i);
 
-            // Normalize both sides
             if (obj.getString("username").trim().equalsIgnoreCase(username.trim())) {
                 return obj;
             }
         }
     } catch (Exception e) {
-        // ignored
+        
     }
     return null;
 }
@@ -326,11 +325,6 @@ public void signIn() {
 
     String enteredPassword = getEnteredPassword().trim();
 
-//    // Debugging output
-//    System.out.println("Entered username: [" + enteredUsername.trim() + "]");
-//    System.out.println("Saved username:   [" + registeredUserName + "]");
-//    System.out.println("Entered password: [" + enteredPassword + "]");
-//    System.out.println("Saved password:   [" + registeredUserPassword + "]");
 
     if (choice == 1) {
         handleForgotPassword(userFound);
@@ -507,7 +501,7 @@ public void handleForgotPassword(boolean userFound) {
     }
 
     JOptionPane.showMessageDialog(null,
-        "✅ Total messages sent: " + Message.returnTotalMessages() +
+        " Total messages sent: " + Message.returnTotalMessages() +
         "\nMessages stored in memory: " + sentMessages.size());
 }
 
@@ -799,7 +793,7 @@ public void deleteByHash(ArrayList<Message> storedMessages) {
         try (FileWriter writer = new FileWriter(file)) {
             writer.write("[]"); // empty JSON array
             JOptionPane.showMessageDialog(null,
-                "🎉 Welcome " + username + "!\nThis is your first time using QuickChat.\nYour message history starts fresh.");
+                " Welcome " + username + "!\nThis is your first time using QuickChat.\nYour message history starts fresh.");
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null,
                 "Error creating new file for " + username + ": " + e.getMessage());
